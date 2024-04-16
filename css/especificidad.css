@@ -1,0 +1,39 @@
+body {
+    background-image: url('https://services.meteored.com/img/article/alem-da-via-lactea-milhares-de-galaxias-sao-atraidas-para-o-mesmo-lugar-atraves-de-um-grande-atrator-1685141543945_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+  }
+  
+
+  header {
+    
+    background-color: black;
+    border: 20px rgba(255, 0, 0, 0.514) dotted;
+  }
+  
+  main {
+    background-color: black;
+    text-align: center;
+       border: 5px rgb(255, 0, 0);
+  }
+  
+  section {
+    background-color: black;
+    border: 5px rgb(255, 0, 0);
+  }
+  
+  footer{
+    background-color: rgb(255, 0, 0);
+  }
+ 
+  .resp1{
+    text-decoration: overline;
+    text-decoration-color: darkred;
+    color: rgba(122, 16, 8, 0.671);
+    background-color:cornsilk;
+  }
+
+  .Preguntas {
+    font-size: 20px;
+}
