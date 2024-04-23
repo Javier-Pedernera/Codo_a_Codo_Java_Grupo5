@@ -1,4 +1,7 @@
-fetch('https://www.googleapis.com/books/v1/volumes?q=war&filter=free-ebooks&maxResults=3&key=AIzaSyCM7-0yuirM8Wuu1aeF2mMClJtHZEUKGM0')
+const apiKey = window.env.apiKey;
+
+console.log(apiKey);
+fetch(`https://www.googleapis.com/books/v1/volumes?q=war&filter=free-ebooks&maxResults=3&key=${apiKey}`)
   .then(response => response.json())
   .then(data => {
     console.log(data);
