@@ -10,7 +10,7 @@ document.getElementById('searchButton').addEventListener('click', () => {
   
   function searchBooks(searchQuery) {
     const apiKey = window.env.apiKey;
-    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&filter=free-ebooks&maxResults=6&key=${apiKey}`;
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=6&key=${apiKey}`;
   
     fetch(apiUrl)
       .then(response => response.json())
