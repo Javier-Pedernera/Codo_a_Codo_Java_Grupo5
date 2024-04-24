@@ -1,0 +1,139 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+    /* background-color: #f2f2f2;
+     */
+     background-image: url("./images/fodoprueba.jpg");background-size: cover;
+     overflow-y: auto;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    background-color: #121e2c !important;
+    color: #25a5ac !important;
+    box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.684);
+  }
+  .navbar-brand img {
+    height: 80px;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  @media (min-width: 992px) {
+    .navbar {
+        height: 120px; 
+    }
+  
+    .navbar-nav .nav-item {
+        margin-right: 30px; 
+    }
+  }
+  .navbar-nav .nav-item {
+    margin-right: 20px; 
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0; 
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff !important; 
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #b2d454 !important;
+  }
+
+.container {
+  display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  /* rtl:begin:remove */
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+    text-align: center;
+    background-color: #25a5ac;
+}
+
+.bd-placeholder-img rounded-circle{
+    image-rendering: auto;
+}
+.container.mt-5{
+    height: 100vh;
+    text-align: center;
+    background-color: #000000;
+    padding: 5%;
+}
+.textoAcerca{
+    height: 100vh;
+    text-align: center;
+    background-color: #ff0000;
+    padding: 5%;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+  }
+
+.navbar-collapse{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+} */
+  
+@media (min-width: 992px) {
+    
+    .navbar {
+        display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+}
