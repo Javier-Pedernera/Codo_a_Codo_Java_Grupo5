@@ -78,6 +78,7 @@ body {
   border-radius: 5px; 
   overflow: hidden; 
   transition: box-shadow 0.3s;
+  padding: 20px;
 }
 
 .card:hover {
@@ -95,15 +96,18 @@ body {
 }
 
 .card-title {
-  font-size: 1.2rem; /* Tamaño del título */
-  margin-bottom: 10px; /* Espacio inferior */
+  font-size: 1.2rem;
+  display: flex;
+  /* margin-bottom: 10px; */
 }
-
 .card-text {
-  margin-bottom: 15px; /* Espacio inferior */
+  margin-bottom: 15px;
+  color: #2f3032;
+  font-size: 1rem;
 }
 
-.addToFavorites,
+
+
 .showDescription {
   margin-top: 10px; /* Espacio superior para los botones */
 }
@@ -111,7 +115,34 @@ body {
 .mt-5 {
   min-height: 100%;
 }
-
-/* .container {
-  min-height: calc(100vh - 220px);
-} */
+.addToFavorites{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+height: 40px;
+width: 40px;
+background-color: transparent;
+border: none;
+}
+.addToFavorites.btn-primary:hover,
+.addToFavorites.btn-primary:focus,
+.addToFavorites.btn-primary:active {
+  background-color: transparent !important;
+  
+}
+.far.fa-star{
+  color: rgb(133, 132, 132);
+}
+.far.fa-star:hover{
+  color: rgb(228, 204, 23);
+}
+.titleStar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+.card-date{
+  font-size: small;
+}
