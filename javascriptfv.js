@@ -24,14 +24,11 @@ function loadFavoriteBooks() {
                             <h5 class="card-title">${bookInfo.title}</h5>
                             <h6 class="card-title">${bookInfo.subtitle || ''}</h6>
                             <p class="card-text">${bookInfo.authors?.[0] || 'Autor desconocido'}</p>
-                            <button class="btn btn-primary addToFavorites">Agregar a Favoritos</button>
                             <button class="btn btn-primary showDescription" data-target="${cardId}">Ver Descripción</button>
                         </div>
                     </div>
                 `;
 
-                const addToFavoritesBtn = card.querySelector('.addToFavorites');
-                addToFavoritesBtn.addEventListener('click', () => addToFavorites(book));
 
                 booksContainer.appendChild(card);
             });
