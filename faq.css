@@ -1,5 +1,6 @@
 body, html {
     margin: 0;
+    padding: 0;
     height: 100vh;
     width:100vw;
     
@@ -38,6 +39,22 @@ body, html {
     width: 100%;
 }
 
+.container.mt-5{
+    height: 100vh;
+      /* background-color: #f2f2f2; */
+    padding: 5%;
+}
+.navbar-collapse{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 h2{
     color:rgb(51, 83, 117);
     
@@ -61,4 +78,15 @@ span {
     bottom: 0;
     height: 200px;
     width: 100%;
-  }
+}
+
+@media (min-width: 992px) {
+    
+    .navbar {
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+}
