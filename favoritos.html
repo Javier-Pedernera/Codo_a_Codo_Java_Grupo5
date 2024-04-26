@@ -1,25 +1,22 @@
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refugio de Libros</title>
+  <title>Favoritos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- estrella de favoritos -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="favoritos.css" rel="stylesheet">
   <script>
-  window.env = {
-      apiKey: "AIzaSyCM7-0yuirM8Wuu1aeF2mMClJtHZEUKGM0"
-    };
-  </script>
-  <link href="styles.css" rel="stylesheet">
+    window.env = {
+        apiKey: "AIzaSyCM7-0yuirM8Wuu1aeF2mMClJtHZEUKGM0"
+      };
+    </script>
 </head>
-
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    
-    <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo" class="logo"></a>
+    <a class="navbar-brand" href="./"><img src="./images/logo.png" alt="logo" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,33 +38,26 @@
     </div>
   </div>
 </nav>
-<body>
-  
-
 
 <div class="container mt-5">
-  <h1>Bienvenido a Refugio de Libros</h1>
-  <div class="input-group mb-3">
-    <input type="text" id="searchInput" class="form-control" placeholder="Buscar libros" aria-label="Buscar libros" aria-describedby="button-addon2">
-    <button class="btn btn-primary" type="button" id="searchButton">Buscar</button>
-  </div>
+  <h1 class="text-center mb-4">Best Sellers o favoritos de las personas</h1>
   <div class="row row-cols-1 row-cols-md-3 g-4" id="booksContainer">
-    <!-- mostrando libros-->
+    <!-- Los libros se añadirán aquí -->
   </div>
 </div>
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="javascript.js"></script>
-</body>
 <footer class="footer bg-dark text-white text-center py-4">
   <div class="container">
     <span class="text-muted">© 2024 Refugio de Libros. Todos los derechos reservados.</span>
   </div>
-
   <div class="whapp">
-   <a href="https://api.whatsapp.com/send?phone=549116064614&text=Hola quiero informacion del sitio" target="_blank"><img src="./images/whatsapp-logo-transparent-free-png.webp" style="width: 50px; height: 50px;">  
+    <a href="https://api.whatsapp.com/send?phone=549116064614&text=Hola quiero informacion del sitio" target="_blank"><img src="./images/whatsapp-logo-transparent-free-png.webp" style="width: 50px; height: 50px;">  
   </div> 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="javascriptfv.js"></script>
+</body>
+</html>
 </html>
