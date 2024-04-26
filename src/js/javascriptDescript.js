@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('title_descrip').textContent = bookInfo.title || 'Título del Libro';
         document.getElementById('publishedDate').textContent = bookInfo.publishedDate ? `Fecha de Publicación: ${bookInfo.publishedDate}` : 'Fecha de Publicación: Desconocida';
         document.getElementById('book_Description').textContent = bookInfo.description || 'Descripción del libro no disponible.';
-        document.getElementById('book_Description').textContent = bookInfo.description || 'Descripción del libro no disponible.';
+       
         
         puntuacion = bookInfo.averageRating
 
