@@ -83,10 +83,15 @@ li{
 }
 
 li a{
+    padding: 0 10px;
     font-size: 20px;
     color: rgb(130, 130, 202);
     text-transform: capitalize;
 }
+
  a:hover{
     background-color:red;
+ }
+ .nav-link {
+    text-decoration: none;
  }
