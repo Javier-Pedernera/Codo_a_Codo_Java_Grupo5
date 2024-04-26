@@ -3,10 +3,9 @@ body, html {
   padding: 0;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
-    /* background-color: #f2f2f2;
-     */
-     background-image: url("../images/fodoprueba.jpg");background-size: cover;
-     overflow-y: auto;
+  background-image: url("../images/fodoprueba.jpg");
+  background-size: cover;
+  overflow-y: auto;
 }
 
 .navbar{
@@ -75,6 +74,7 @@ body, html {
     --bs-gutter-y: 0;
 }
 
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -103,30 +103,52 @@ body, html {
     padding: 5%;
 }
 .footer {
-    position: relative;
-    bottom: 0;
-    height: 200px;
-    width: 100%;
-  }
-
-.navbar-collapse{
+  position: relative;
+  background-color: #121e2c;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.mt-5 {
+  min-height: 100%;
+}
+.col-md-7{
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+/* .navbar-collapse{
     display: flex;
     width: 100%;
     justify-content: space-around;
-}
+} */
 
 /* ul{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 } */
-  
+.row.featurette{
+min-height: 430px;
+}
 @media (min-width: 992px) {
-    
-    .navbar {
-        display: flex;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  .navbar {
+      height: 120px;
+  }
+
+  .navbar-nav .nav-item {
+      margin-right: 30px;
+  }
+}
+.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto{
+  height: 100%;
+  width: auto;
+}
+.lead{
+  margin-top: 20px;
+  font-size: medium;
+  font-weight: 500;
 }
