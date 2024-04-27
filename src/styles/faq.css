@@ -1,12 +1,17 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background-image: url("../images/fodoprueba.jpg");
-    background-size: cover;
-    overflow-y: auto;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* Fondo con imagen de fondo */
+body {
+  background-image: url("../images/fodoprueba.jpg");
+  background-size: cover;
+  overflow-y: auto;
+}
   
   .navbar {
     display: flex;
@@ -43,30 +48,13 @@ body, html {
     color: #b2d454 !important;
   }
 
-.logo{
-        height: 100px;
-}
-
-.container {
-    display: flex;
-    padding: 2%;
-    width: 100%;
-}
-
-.container.mt-5{
-    height: 100vh;
-      /* background-color: #f2f2f2; */
-    padding: 5%;
-}
-.navbar-collapse{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-ul{
-    display: flex;
+.faq{
     width: 100%;
     justify-content: space-evenly;
+}
+
+.mt-5 {
+  min-height: 100%;
 }
 
 h2{
@@ -88,23 +76,22 @@ span {
 }
 
 .footer {
-    position: relative;
-    background-color: #121e2c;
-    color: #fff;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
+  position: relative;
+  background-color: #121e2c;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
 
 @media (min-width: 992px) {
-    
-    .navbar {
-      display: flex;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    
+  .navbar {
+      height: 120px; 
+  }
+
+  .navbar-nav .nav-item {
+      margin-right: 30px; 
+  }
 }
