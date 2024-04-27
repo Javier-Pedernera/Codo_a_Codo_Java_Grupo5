@@ -1,6 +1,5 @@
-const apiKey = window.env.apiKey;
+const apiKey = process.env.API_KEY;
 
-console.log(apiKey);
 
 document.getElementById('searchButton').addEventListener('click', () => {
   const searchInput = document.getElementById('searchInput').value.trim();
@@ -22,7 +21,6 @@ function searchBooks(searchQuery) {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       const booksContainer = document.getElementById('booksContainer');
       booksContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevos libros
 
