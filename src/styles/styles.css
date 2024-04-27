@@ -80,11 +80,13 @@ body {
   border-radius: 5px; 
   overflow: hidden; 
   transition: box-shadow 0.3s;
-  padding: 20px;
+  padding: 15px;
+  height: 100%;
+  background-color: #f6f6f6eb;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
 }
 
 .card-img-top {
@@ -94,7 +96,10 @@ body {
 }
 
 .card-body {
-  padding: 20px; /* Espaciado interior */
+  padding: 10px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-title {
@@ -111,7 +116,7 @@ body {
 
 
 .showDescription {
-  margin-top: 10px; /* Espacio superior para los botones */
+  margin-top: 10px;
 }
 
 .mt-5 {
