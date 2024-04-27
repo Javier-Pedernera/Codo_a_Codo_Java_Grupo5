@@ -50,7 +50,7 @@ function searchBooks(searchQuery) {
             <p class="card-text">${bookInfo.authors?.[0] || 'Autor desconocido'}</p>
             <h6 class="card-date">${bookInfo.publishedDate || ''}</h6>
               <button class="btn btn-primary showDescription" data-target="${cardId}">
-              <a href="./src/models/descripcion.html?id=${cardId}" class="btn btn-primary">Ver Descripción</a>
+              <a href="../models/descripcion.html?id=${cardId}" class="btn btn-primary">Ver Descripción</a>
               </button>
             </div>
           </div>
