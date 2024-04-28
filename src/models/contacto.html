@@ -63,7 +63,9 @@
             placeholder="Teléfono">
           <label for="exampleInputEmail1">Correo Electrónico</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="Enter your name..." data-sb-validations="required">
+            placeholder="Enter your name..." data-sb-validations="required">
+          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
           <label for="message" required>Mensaje</label>
           <textarea name="message" id="message" class="form-control" rows="5" placeholder="Mensaje..."></textarea>
           <!-- Button trigger modal -->
@@ -81,20 +83,20 @@
                 <div class="modal-body">
                   ¡¡Gracias por escribirnos!!
                   <p>Nos comunicaremos en la brevedad</p>
-                  <img src="../images/librok.png.webp" style="width: 50px; height: 50px;">
-                <div class="modal-footer">
-                  <a href="../../index.html">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                  </a>
+                  <img src="../images/librok.png" style="width: 400px; height: 300px;">
+                  <div class="modal-footer">
+                    <a href="../../index.html">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </form>
     </section>
   </div>
-</div>
+  </div>
   <footer class="footer bg-dark text-white text-center py-4">
     <div class="container">
       <span class="text-muted">© 2024 Refugio de Libros. Todos los derechos reservados.</span>
