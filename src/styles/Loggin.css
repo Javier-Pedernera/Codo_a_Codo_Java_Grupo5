@@ -89,15 +89,16 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
+/* 
 .login-btn {
   background-color: #007bff;
   border-color: #007bff;
-}
+} */
 
 .btn-primary:hover, .btn-log:hover, .btn-reg:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+  
 }
 
 .btn-primary,.btn-log, .btn-reg {
@@ -115,10 +116,13 @@ body {
   color: #fff;
   background: linear-gradient(to right, #00bcd4, #007bff);
 }
-
+.btn-reg:hover{
+  color: #ffffff;
+}
 .btn-reg {
   background-color: #337e31;
-  border-color: #337e31;
+  border: 1px solid #337e31;
+  text-decoration: none;
   color: #fff;
   background: linear-gradient(to right, #337e31, #0d3109);
 }
