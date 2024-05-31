@@ -62,6 +62,22 @@ body {
   color: #b2d454 !important;
 }
 
+.login-btn {
+  height: 40px;
+  width: auto;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff !important;
+  border: none;
+}
+
+.login-btn:hover,
+.login-btn:focus,
+.login-btn:active {
+  background-color: #0056b3 !important;
+}
+
 /* Estilos del footer */
 .footer {
   position: relative;
