@@ -53,21 +53,54 @@ body, html {
   color: #b2d454 !important;
 }
 
-.login-btn {
-  height: 40px;
-  width: auto;
-  padding: 0 20px;
-  font-size: 16px;
+
+.login-btn, .btn-log, .btn-reg {
+  padding: 10px 20px;
   border-radius: 5px;
-  background-color: #007bff !important;
-  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.login-btn:hover,
-.login-btn:focus,
-.login-btn:active {
-  background-color: #0056b3 !important;
+.login-btn {
+  background-color: #007bff;
+  border-color: #007bff;
 }
+
+.btn-primary:hover, .btn-log:hover, .btn-reg:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-primary,.btn-log, .btn-reg {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.btn-log {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+  background: linear-gradient(to right, #00bcd4, #007bff);
+}
+
+.btn-reg {
+  background-color: #337e31;
+  border-color: #337e31;
+  color: #fff;
+  background: linear-gradient(to right, #337e31, #0d3109);
+}
+
+.btn-primary {
+  background-color: #000000;
+  border-color: #070707;
+  color: #fff;
+  background: radial-gradient(rgb(39, 39, 218),rgb(15, 14, 14));
+}
+
 
 .footer {
   position: relative;

@@ -8,7 +8,7 @@ body, html {
   
   /* Fondo con imagen de fondo */
   body {
-    background-image: url("../images/Fondo2.png");
+    background-image: url(" ../images/Fondo2.png");
     background-size: cover;
     overflow-y: auto;
   }
@@ -55,6 +55,7 @@ h2{
   .navbar-nav .nav-link:hover {
     color: #b2d454 !important;
   }
+  
   
   /* Estilos del footer */
   .footer {
@@ -127,20 +128,59 @@ textarea {
     border-radius: 5px;
 }
 
-.btn {
-    margin-top: 20px;
-    background-color: #0b6503;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.login-btn, .btn-log, .btn-reg {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #5ebc55;
-    color: #2f2f2f;font-weight: 500;
+.login-btn {
+  background-color: #007bff;
+  border-color: #007bff;
 }
+
+.btn-primary:hover, .btn-log:hover, .btn-reg:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-primary,.btn-log, .btn-reg, .btn-send {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-send{
+  background-color: #337e31;
+  border-color: #337e31;
+  color: #fff;
+  background: linear-gradient(to right, #337e31, #0d3109);
+}
+
+.btn-log {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+  background: linear-gradient(to right, #00bcd4, #007bff);
+}
+
+.btn-reg {
+  background-color: #337e31;
+  border-color: #337e31;
+  color: #fff;
+  background: linear-gradient(to right, #337e31, #0d3109);
+}
+
+.btn-primary {
+  background-color: #000000;
+  border-color: #070707;
+  color: #fff;
+  background: radial-gradient(rgb(39, 39, 218),rgb(15, 14, 14));
+}
+
 .mt-5 {
     min-height: 100%;
   }

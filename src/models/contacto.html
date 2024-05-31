@@ -14,10 +14,8 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-
-    <a class="navbar-brand" href="../../index.html"><img src="../images/logo.png" alt="logo" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="./"><img src="/src/images/logo.png" alt="logo" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,18 +24,21 @@
           <a class="nav-link" href="../../index.html"><i class="bi bi-house-door"></i> Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../models/favoritos.html"><i class="bi bi-star-fill"></i> Favoritos</a>
+          <a class="nav-link" href="./favoritos.html"><i class="bi bi-star-fill"></i> Favoritos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../models/Acerca.html"><i class="bi bi-emoji-wink"></i> Nosotros</a>
+          <a class="nav-link" href="./Acerca.html"><i class="bi bi-emoji-wink"></i> Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../models/faq.html"><i class="bi bi-question-circle"></i> Faq</a>
+          <a class="nav-link" href="./faq.html"><i class="bi bi-question-circle"></i> Faq</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../models/contacto.html"><i class="bi bi-envelope-at-fill"></i> Contacto</a>
+          <a class="nav-link" href="./contacto.html"><i class="bi bi-envelope-at-fill"></i> Contacto</a>
         </li>
       </ul>
+    </div>
+    <div class="ml-auto">
+      <button class="btn btn-primary login-btn" onclick="window.location.href='./Loggin.html';">Iniciar Sesión</button>
     </div>
   </div>
 </nav>
@@ -70,7 +71,7 @@
           <label for="message" required>Mensaje</label>
           <textarea name="message" id="message" class="form-control" rows="5" placeholder="Mensaje..."></textarea>
           <!-- Button trigger modal -->
-          <input type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          <input type="button" class="btn-send" data-bs-toggle="modal" data-bs-target="#exampleModal"
             value="Enviar"></input>
           <!-- Modal Enviar-->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
