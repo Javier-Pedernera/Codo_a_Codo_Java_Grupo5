@@ -20,9 +20,9 @@ body {
   border: 2px solid #ffffff;
   border-radius: 10px; 
   padding: 20px; 
-  background-color: #121e2ceb;
+  /* background-color: #121e2ceb; */
   text-align: center;
-  color: b2d454;
+  color: #acd736;
 }
 
 /* Estilos de la barra de navegación */
