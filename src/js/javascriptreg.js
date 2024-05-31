@@ -7,8 +7,12 @@ document.getElementById('loginform').addEventListener('submit', function(event) 
     var age = document.getElementById('age').value
     
     if (username.trim() === '' || password.trim() === '' || mail.trim() === '' || age.trim() === '') {
-        alert('Por favor, complete todos los campos.');
-    } else {
-        alert('Registro exitoso usuario: ' + username);
-    }
+            var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+            errorModal.show();
+        } else {
+            var modalUsername = document.getElementById('modalUsername');
+            modalUsername.textContent = username;
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        }
 });
