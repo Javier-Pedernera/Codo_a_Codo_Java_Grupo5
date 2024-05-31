@@ -156,6 +156,10 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
+.btn-primary2:hover, .btn-log:hover, .btn-reg:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
 
 .btn-primary,.btn-log, .btn-reg {
   padding: 10px 20px;
@@ -180,12 +184,14 @@ body {
   background: linear-gradient(to right, #337e31, #0d3109);
 }
 
-.btn-primary {
+.btn-primary2 {
   background-color: #000000;
   border-color: #070707;
   color: #fff;
   background: radial-gradient(rgb(39, 39, 218),rgb(15, 14, 14));
 }
+
+
 
 
 

@@ -49,6 +49,12 @@ body, html {
 .navbar-nav .nav-link:hover {
   color: #b2d454 !important;
 }
+.btn-primary2 {
+  background-color: #000000;
+  border-color: #070707;
+  color: #fff;
+  background: radial-gradient(rgb(39, 39, 218),rgb(15, 14, 14));
+}
 .login-btn {
   height: 40px;
   width: auto;
