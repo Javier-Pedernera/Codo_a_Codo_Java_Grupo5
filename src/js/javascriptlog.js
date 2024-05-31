@@ -4,10 +4,15 @@ document.getElementById('loginform').addEventListener('submit', function(event) 
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    
     if (username.trim() === '' || password.trim() === '') {
-        alert('Por favor, complete todos los campos.');
+        // Muestra el modal de error
+        var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+        errorModal.show();
     } else {
-        alert('Inicio de sesión exitoso con usuario: ' + username);
+        // Muestra el modal de inicio de sesión exitoso
+        var modalUsername = document.getElementById('modalUsername');
+        modalUsername.textContent = username;
+        var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show();
     }
 });
