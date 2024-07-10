@@ -5,6 +5,8 @@ import com.example.demo.models.UsuarioModel;
 import com.example.demo.repositories.LibroRepository;
 import com.example.demo.repositories.UsuarioRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
 import java.util.Set;
@@ -23,6 +25,7 @@ public class LibroService {
     // public Iterable<LibroModel> obtenerTodosLosLibros() {
     //     return libroRepository.findAll();
     // }
+
     public LibroModel guardarLibro(LibroModel libro) {
         return libroRepository.save(libro);
     }
@@ -36,6 +39,12 @@ public Optional<LibroModel> buscarPorId(Long id) {
 
     public Set<LibroModel> obtenerTodosLosLibros() {
         return libroRepository.findAll().stream()
+                .map(this::eliminarContraseñas)
+                .collect(Collectors.toSet());
+    }
+    public Set<LibroModel> buscarLibrosPorTermino(String termino) {
+        return libroRepository.findAll().stream()
+                .filter(libro -> libro.getNombre().toLowerCase().contains(termino.toLowerCase()))
                 .map(this::eliminarContraseñas)
                 .collect(Collectors.toSet());
     }

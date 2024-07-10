@@ -10,8 +10,12 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
 
+    private String usuario;
+
     private String email;
     private String contraseña;
+
+    private int edad;
 
     @ManyToMany
     @JoinTable(
@@ -22,6 +26,23 @@ public class UsuarioModel {
     private Set<LibroModel> favoritos = new HashSet<>();
 
     // Getters y setters
+
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 
     public Long getId_usuario() {
         return id_usuario;
