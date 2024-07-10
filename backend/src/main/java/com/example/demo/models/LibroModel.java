@@ -5,6 +5,7 @@ import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,7 +16,14 @@ public class LibroModel {
     private Long id_libro;
 //agregar titulo,autor y imagen, descripcion
     private String nombre;
-    private String descripcion;
+    @JsonProperty("titulo")
+    private String title;
+    @JsonProperty("autor")
+    private String authors;
+    @JsonProperty("imagen")
+    private String previewLink;
+    @JsonProperty("descripcion")
+    private String description;
     private String genero;
     private Integer calificacion;
     private Integer año;
@@ -43,12 +51,36 @@ public class LibroModel {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(String authors) {
+        this.authors = authors;
+    }
+
+    public String getPreviewLink() {
+        return previewLink;
+    }
+
+    public void setPreviewLink(String previewLink) {
+        this.previewLink = previewLink;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getGenero() {
