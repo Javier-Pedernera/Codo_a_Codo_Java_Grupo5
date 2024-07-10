@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', loadFavoriteBooks);
 function loadFavoriteBooks() {
     const apiKey = window.env.apiKey;
 
-    const apiUrl = `https://www.googleapis.com/books/v1/users/112151905261123439023/bookshelves/0/volumes?key=${apiKey}`;
+    const apiUrl = `http://localhost:8080/libros/buscar`;
 
     fetch(apiUrl)
         .then(response => response.json())

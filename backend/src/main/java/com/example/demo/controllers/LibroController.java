@@ -19,11 +19,18 @@ public class LibroController {
         this.libroService = libroService;
     }
     //obtener todos los libros
-    @GetMapping
+    @GetMapping("/buscar")
     public ResponseEntity<Iterable<LibroModel>> obtenerTodosLosLibros() {
         Iterable<LibroModel> libros = libroService.obtenerTodosLosLibros();
         return ResponseEntity.ok(libros);
     }
+    //obtener libro buscado
+
+    public ResponseEntity<Set<LibroModel>> buscarLibrosPorTermino(@RequestParam String termino) {
+        Set<LibroModel> libros = libroService.buscarLibrosPorTermino(termino);
+        return ResponseEntity.ok(libros);
+    }
+
     // Endpoint para crear un libro nuevo
     @PostMapping
     public ResponseEntity<LibroModel> crearLibro(@RequestBody LibroModel libro) {
