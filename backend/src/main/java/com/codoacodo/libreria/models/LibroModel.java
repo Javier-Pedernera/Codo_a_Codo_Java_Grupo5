@@ -15,20 +15,15 @@ public class LibroModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_libro;
-//agregar titulo,autor y imagen, descripcion
-    private String nombre;
     @JsonProperty("title")
     private String titulo;
     @JsonProperty("authors")
     private String autor;
     @JsonProperty("previewLink")
     private String imagen;
+    @Column(name = "descripcion", columnDefinition = "TEXT")    
     @JsonProperty("description")
     private String descripcion;
-    private String genero;
-    private Integer calificacion;
-    private Integer año;
-    private Integer estrellas;
 
     @ManyToMany(mappedBy = "favoritos")
     @JsonIgnoreProperties("favoritos")
@@ -75,45 +70,6 @@ public class LibroModel {
 
     public void setId_libro(Long id_libro) {
         this.id_libro = id_libro;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public Integer getCalificacion() {
-        return calificacion;
-    }
-
-    public void setCalificacion(Integer calificacion) {
-        this.calificacion = calificacion;
-    }
-
-    public Integer getAño() {
-        return año;
-    }
-
-    public void setAño(Integer año) {
-        this.año = año;
-    }
-
-    public Integer getEstrellas() {
-        return estrellas;
-    }
-
-    public void setEstrellas(Integer estrellas) {
-        this.estrellas = estrellas;
     }
 
     public Set<UsuarioModel> getUsuarios() {

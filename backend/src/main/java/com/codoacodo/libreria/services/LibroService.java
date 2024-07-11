@@ -22,17 +22,11 @@ public class LibroService {
         this.libroRepository = libroRepository;
         this.usuarioRepository = usuarioRepository;
     }
-    // public Iterable<LibroModel> obtenerTodosLosLibros() {
-    //     return libroRepository.findAll();
-    // }
 
     public LibroModel guardarLibro(LibroModel libro) {
         return libroRepository.save(libro);
     }
 
-    // public Optional<LibroModel> buscarPorId(Long id) {
-    //     return libroRepository.findById(id);
-    // }
 public Optional<LibroModel> buscarPorId(Long id) {
         return libroRepository.findById(id).map(this::eliminarContraseñas);
     }
@@ -44,7 +38,7 @@ public Optional<LibroModel> buscarPorId(Long id) {
     }
     public Set<LibroModel> buscarLibrosPorTermino(String termino) {
         return libroRepository.findAll().stream()
-                .filter(libro -> libro.getNombre().toLowerCase().contains(termino.toLowerCase()))
+                .filter(libro -> libro.getTitulo().toLowerCase().contains(termino.toLowerCase()))
                 .map(this::eliminarContraseñas)
                 .collect(Collectors.toSet());
     }
