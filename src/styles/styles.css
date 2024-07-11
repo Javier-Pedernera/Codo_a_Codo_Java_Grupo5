@@ -191,9 +191,18 @@ body {
   background: radial-gradient(rgb(39, 39, 218),rgb(15, 14, 14));
 }
 
-
-
-
+.btn .btn-primary .addToFavorites{
+  box-shadow: none;
+  outline: none;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus{
+  box-shadow: none;
+  outline: none;
+}
+.addToFavorites.btn-primary:hover, .addToFavorites.btn-primary:focus, .addToFavorites.btn-primary:active{
+  box-shadow: none;
+  outline: none;
+} 
 
 .showDescription {
   margin-top: 10px;
@@ -220,8 +229,8 @@ border: none;
 .far.fa-star{
   color: rgb(133, 132, 132);
 }
-.far.fa-star:hover{
-  color: rgb(228, 204, 23);
+.far.fa-star:hover {
+  color: #ffd700; /* Cambia el color al pasar el cursor por encima */
 }
 .titleStar{
   display: flex;

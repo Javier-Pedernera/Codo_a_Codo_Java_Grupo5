@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', loadFavoriteBooks);
 
 function loadFavoriteBooks() {
-    const apiKey = window.env.apiKey;
 
     const apiUrl = `http://localhost:8080/libros/buscar`;
 
@@ -11,25 +10,27 @@ function loadFavoriteBooks() {
             const booksContainer = document.getElementById('booksContainer');
             booksContainer.innerHTML = ''; 
 
-            data.items.forEach((book, index) => {
-                const bookInfo = book.volumeInfo;
+            data.forEach((book, index) => {
                 const cardId = book.id;
                 const card = document.createElement('div');
                 card.id = cardId;
                 card.classList.add('col-md-4'); 
                 card.innerHTML = `
                     <div class="card">
-                        <img src="${bookInfo.imageLinks?.smallThumbnail || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${bookInfo.title}">
+                        <img src="${book.previewLink || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${book.title}">
                         <div class="card-body">
-                            <h5 class="card-title">${bookInfo.title}</h5>
-                            <h6 class="card-title">${bookInfo.subtitle || ''}</h6>
-                            <p class="card-text">${bookInfo.authors?.[0] || 'Autor desconocido'}</p>
+                            <h5 class="card-title">${book.title}</h5>
+                            <p class="card-text">${book.authors || 'Autor desconocido'}</p>
                             <p class="description"></p> <!-- Aquí se mostrará la descripción -->
                             <button class="btn btn-primary showDescription" data-target="${cardId}">Mostrar Descripción</button>
                         </div>
                     </div>
                 `;
 
+                // title: book.volumeInfo.title,
+                // authors: book.volumeInfo.authors?.[0] || 'Autor desconocido',
+                // previewLink: book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150',
+                // description: book.volumeInfo.description || ''
                 const descriptionButton = card.querySelector('.showDescription');
                 const descriptionElement = card.querySelector('.description');
                 let descriptionVisible = false; 
@@ -39,7 +40,7 @@ function loadFavoriteBooks() {
                         descriptionElement.textContent = ''; 
                         descriptionButton.textContent = 'Mostrar Descripción';
                     } else {
-                        descriptionElement.textContent = bookInfo.description || 'Descripción no disponible'; 
+                        descriptionElement.textContent = book.description || 'Descripción no disponible'; 
                         descriptionButton.textContent = 'Ocultar Descripción';
                     }
                     descriptionVisible = !descriptionVisible; 

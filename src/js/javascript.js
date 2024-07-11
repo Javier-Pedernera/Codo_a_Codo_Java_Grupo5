@@ -64,23 +64,33 @@ function searchBooks(searchQuery) {
 }
 
 function addToFavorites(book, button) {
-  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-  const isBookInFavorites = favorites.some(favorite => favorite.id === book.id);
+  const filledStarIcon = document.createElement('i');
+  filledStarIcon.classList.add('fas', 'fa-star');
+  const apiUrl = 'http://localhost:8080/libros';
+  const postData = {
+    title: book.volumeInfo.title,
+    authors: book.volumeInfo.authors?.[0] || 'Autor desconocido',
+    previewLink: book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150',
+    description: book.volumeInfo.description || ''
+  };
 
-  if (!isBookInFavorites) {
-    favorites.push({
-      id: book.id,
-      title: book.volumeInfo.title,
-      authors: book.volumeInfo.authors || [],
-      description: book.volumeInfo.description || '',
-      thumbnail: book.volumeInfo.imageLinks?.smallThumbnail || 'https://via.placeholder.com/150'
-    });
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    console.log('Libro agregado a favoritos:', book.volumeInfo.title);
-    // Cambiar la estrella a llena
-    button.innerHTML = '';
-    button.appendChild(filledStarIcon.cloneNode(true));
-  } else {
-    console.log('El libro ya está en la lista de favoritos.');
-  }
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(postData)
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Libro agregado a favoritos:', postData.title);
+      // Cambiar el ícono de estrella a lleno
+      button.querySelector('i').classList.remove('far');
+      button.querySelector('i').classList.add('fas');
+      button.querySelector('i').classList.add('text-warning'); // opcional: cambiar el color a amarillo si lo deseas
+    } else {
+      console.error('Error al agregar el libro a favoritos:', response.statusText);
+    }
+  })
+  .catch(error => console.error('Error al agregar el libro a favoritos:', error));
 }

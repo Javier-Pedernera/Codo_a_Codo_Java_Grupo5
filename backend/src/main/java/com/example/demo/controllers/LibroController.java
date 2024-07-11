@@ -52,12 +52,6 @@ public class LibroController {
         return usuario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Endpoint para eliminar un libro de los favoritos de un usuario
-    @DeleteMapping("/{libroId}/favorito/{usuarioId}")
-    public ResponseEntity<UsuarioModel> eliminarFavorito(@PathVariable Long usuarioId, @PathVariable Long libroId) {
-        Optional<UsuarioModel> usuario = libroService.eliminarFavorito(usuarioId, libroId);
-        return usuario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
 
     // Endpoint para obtener los libros favoritos de un usuario
     @GetMapping("/favoritos/{usuarioId}")
