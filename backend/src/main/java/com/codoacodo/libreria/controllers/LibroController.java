@@ -1,8 +1,8 @@
-package com.example.demo.controllers;
+package com.codoacodo.libreria.controllers;
 
-import com.example.demo.models.LibroModel;
-import com.example.demo.models.UsuarioModel;
-import com.example.demo.services.LibroService;
+import com.codoacodo.libreria.models.LibroModel;
+import com.codoacodo.libreria.models.UsuarioModel;
+import com.codoacodo.libreria.services.LibroService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,14 +18,15 @@ public class LibroController {
     public LibroController(LibroService libroService) {
         this.libroService = libroService;
     }
-    //obtener todos los libros
+
+    // Endpoint para obtener todos los libros
     @GetMapping("/buscar")
     public ResponseEntity<Iterable<LibroModel>> obtenerTodosLosLibros() {
         Iterable<LibroModel> libros = libroService.obtenerTodosLosLibros();
         return ResponseEntity.ok(libros);
     }
-    //obtener libro buscado
 
+    // Endpoint para obtener libro por titulo
     public ResponseEntity<Set<LibroModel>> buscarLibrosPorTermino(@RequestParam String termino) {
         Set<LibroModel> libros = libroService.buscarLibrosPorTermino(termino);
         return ResponseEntity.ok(libros);
@@ -58,5 +59,16 @@ public class LibroController {
     public ResponseEntity<Set<LibroModel>> obtenerFavoritos(@PathVariable Long usuarioId) {
         Optional<Set<LibroModel>> favoritos = libroService.obtenerFavoritos(usuarioId);
         return favoritos.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    // Endpoint para eliminar un libro por id
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarLibro(@PathVariable Long id) {
+        boolean eliminado = libroService.eliminarLibro(id);
+        if (eliminado) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

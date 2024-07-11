@@ -26,11 +26,7 @@ function loadFavoriteBooks() {
                         </div>
                     </div>
                 `;
-
-                // title: book.volumeInfo.title,
-                // authors: book.volumeInfo.authors?.[0] || 'Autor desconocido',
-                // previewLink: book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150',
-                // description: book.volumeInfo.description || ''
+                
                 const descriptionButton = card.querySelector('.showDescription');
                 const descriptionElement = card.querySelector('.description');
                 let descriptionVisible = false; 

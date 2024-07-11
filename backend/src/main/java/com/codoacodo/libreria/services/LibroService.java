@@ -1,12 +1,10 @@
-package com.example.demo.services;
+package com.codoacodo.libreria.services;
 
-import com.example.demo.models.LibroModel;
-import com.example.demo.models.UsuarioModel;
-import com.example.demo.repositories.LibroRepository;
-import com.example.demo.repositories.UsuarioRepository;
+import com.codoacodo.libreria.repositories.LibroRepository;
+import com.codoacodo.libreria.repositories.UsuarioRepository;
+import com.codoacodo.libreria.models.LibroModel;
+import com.codoacodo.libreria.models.UsuarioModel;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
 import java.util.Set;
@@ -22,17 +20,11 @@ public class LibroService {
         this.libroRepository = libroRepository;
         this.usuarioRepository = usuarioRepository;
     }
-    // public Iterable<LibroModel> obtenerTodosLosLibros() {
-    //     return libroRepository.findAll();
-    // }
 
     public LibroModel guardarLibro(LibroModel libro) {
         return libroRepository.save(libro);
     }
 
-    // public Optional<LibroModel> buscarPorId(Long id) {
-    //     return libroRepository.findById(id);
-    // }
 public Optional<LibroModel> buscarPorId(Long id) {
         return libroRepository.findById(id).map(this::eliminarContraseñas);
     }
@@ -44,7 +36,7 @@ public Optional<LibroModel> buscarPorId(Long id) {
     }
     public Set<LibroModel> buscarLibrosPorTermino(String termino) {
         return libroRepository.findAll().stream()
-                .filter(libro -> libro.getNombre().toLowerCase().contains(termino.toLowerCase()))
+                .filter(libro -> libro.getTitulo().toLowerCase().contains(termino.toLowerCase()))
                 .map(this::eliminarContraseñas)
                 .collect(Collectors.toSet());
     }
@@ -71,4 +63,12 @@ public Optional<LibroModel> buscarPorId(Long id) {
         return usuario.map(UsuarioModel::getFavoritos);
     }
 
+    public boolean eliminarLibro(Long id) {
+        Optional<LibroModel> libro = libroRepository.findById(id);
+        if (libro.isPresent()) {
+            libroRepository.delete(libro.get());
+            return true;
+        }
+        return false;
+    }
 }

@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.codoacodo.libreria.models;
 import java.util.HashSet;
 import java.util.Set;
 import jakarta.persistence.*;

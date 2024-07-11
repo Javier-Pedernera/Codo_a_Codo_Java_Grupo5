@@ -1,4 +1,4 @@
-package com.example.demo.dtos;
+package com.codoacodo.libreria.dtos;
 
 public class UsuarioDTO {
 
