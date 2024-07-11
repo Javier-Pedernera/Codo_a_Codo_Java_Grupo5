@@ -1,9 +1,7 @@
-package com.example.demo.models;
+package com.codoacodo.libreria.models;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -21,7 +19,7 @@ public class LibroModel {
     private String autor;
     @JsonProperty("previewLink")
     private String imagen;
-    @Column(name = "descripcion", columnDefinition = "TEXT")    
+    @Column(name = "descripcion", columnDefinition = "TEXT")
     @JsonProperty("description")
     private String descripcion;
 

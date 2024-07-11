@@ -1,8 +1,8 @@
-package com.example.demo.controllers;
+package com.codoacodo.libreria.controllers;
 
-import com.example.demo.dtos.UsuarioDTO;
-import com.example.demo.models.UsuarioModel;
-import com.example.demo.services.UsuarioService;
+import com.codoacodo.libreria.dtos.UsuarioDTO;
+import com.codoacodo.libreria.models.UsuarioModel;
+import com.codoacodo.libreria.services.UsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

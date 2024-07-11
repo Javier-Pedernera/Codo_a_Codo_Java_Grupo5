@@ -9,12 +9,13 @@ body, html {
 }
 .bestseller{
   font-family: "Pacifico", cursive;
+  color:#2b4b86;
   font-weight: 400;
   font-style: normal; 
-  border: 2px solid #ffffff;
+  border: 2px solid #888;
   border-radius: 10px; 
-  padding: 20px; 
-  background-color: #000000ab;
+  padding: 15px; 
+  background-color: #d2d2d2ab;
   text-align: center;
 }
 

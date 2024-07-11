@@ -1,7 +1,7 @@
-package com.example.demo.services;
-import com.example.demo.dtos.UsuarioDTO;
-import com.example.demo.models.UsuarioModel;
-import com.example.demo.repositories.UsuarioRepository;
+package com.codoacodo.libreria.services;
+import com.codoacodo.libreria.dtos.UsuarioDTO;
+import com.codoacodo.libreria.repositories.UsuarioRepository;
+import com.codoacodo.libreria.models.UsuarioModel;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
