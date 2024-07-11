@@ -66,21 +66,9 @@ public Optional<LibroModel> buscarPorId(Long id) {
         return Optional.empty();
     }
 
-    public Optional<UsuarioModel> eliminarFavorito(Long usuarioId, Long libroId) {
-        Optional<UsuarioModel> usuario = usuarioRepository.findById(usuarioId);
-        Optional<LibroModel> libro = libroRepository.findById(libroId);
-
-        if (usuario.isPresent() && libro.isPresent()) {
-            UsuarioModel usuarioModel = usuario.get();
-            usuarioModel.getFavoritos().remove(libro.get());
-            usuarioRepository.save(usuarioModel);
-            return Optional.of(usuarioModel);
-        }
-        return Optional.empty();
-    }
-
     public Optional<Set<LibroModel>> obtenerFavoritos(Long usuarioId) {
         Optional<UsuarioModel> usuario = usuarioRepository.findById(usuarioId);
         return usuario.map(UsuarioModel::getFavoritos);
     }
+
 }

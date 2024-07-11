@@ -1,5 +1,6 @@
 package com.example.demo.models;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
@@ -16,14 +17,14 @@ public class LibroModel {
     private Long id_libro;
 //agregar titulo,autor y imagen, descripcion
     private String nombre;
-    @JsonProperty("titulo")
-    private String title;
-    @JsonProperty("autor")
-    private String authors;
-    @JsonProperty("imagen")
-    private String previewLink;
-    @JsonProperty("descripcion")
-    private String description;
+    @JsonProperty("title")
+    private String titulo;
+    @JsonProperty("authors")
+    private String autor;
+    @JsonProperty("previewLink")
+    private String imagen;
+    @JsonProperty("description")
+    private String descripcion;
     private String genero;
     private Integer calificacion;
     private Integer año;
@@ -34,6 +35,39 @@ public class LibroModel {
     private Set<UsuarioModel> usuarios = new HashSet<>();
 
     // Getters y setters
+
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
     public Long getId_libro() {
         return id_libro;
@@ -50,39 +84,6 @@ public class LibroModel {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(String authors) {
-        this.authors = authors;
-    }
-
-    public String getPreviewLink() {
-        return previewLink;
-    }
-
-    public void setPreviewLink(String previewLink) {
-        this.previewLink = previewLink;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getGenero() {
         return genero;
     }
